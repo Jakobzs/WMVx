@@ -1,0 +1,21 @@
+name: Build C++ Project
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build solution
+        run: |
+          msbuild WMVx.sln /p:Configuration=Release /p:Platform=x64
