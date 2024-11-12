@@ -13,6 +13,13 @@ jobs:
     runs-on: windows-latest
 
     steps:
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: '6.5'
+          host: 'windows'
+          target: 'desktop'
+
       - name: Checkout code
         uses: actions/checkout@v4
 
