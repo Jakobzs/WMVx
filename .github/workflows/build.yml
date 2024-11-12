@@ -13,6 +13,19 @@ jobs:
     runs-on: windows-latest
 
     steps:
+      - name: Download the VSIX file
+        run: |
+          curl -L -o QtVisualStudioTools2022.vsix "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/TheQtCompany/vsextensions/QtVisualStudioTools2022/3.3.0.13/vspackage"
+
+      - name: Install the Visual Studio extension
+        run: |
+          "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\VSIXInstaller.exe" /quiet /norestart /install QtVisualStudioTools2022.vsix
+        # Update the path if you're using a different edition (Community, Professional, etc.)
+
+      - name: Verify installation
+        run: |
+          "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\devenv.exe" /setup
+
       - name: Install Qt
         uses: jurplel/install-qt-action@v4
         with:
