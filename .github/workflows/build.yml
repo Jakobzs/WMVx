@@ -13,6 +13,11 @@ jobs:
     runs-on: windows-latest
 
     steps:
+      - name: "Install shit" 
+        uses: microcompiler/install-vsix@main
+        with: 
+          packagename: 'nanoframework.nanoFramework-VS2019-Extension'
+
       - name: Download the VSIX file
         run: |
           curl -L -o QtVisualStudioTools2022.vsix "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/TheQtCompany/vsextensions/QtVisualStudioTools2022/3.3.0.13/vspackage"
