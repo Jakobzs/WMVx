@@ -16,7 +16,7 @@ jobs:
       - name: "Install shit" 
         uses: microcompiler/install-vsix@main
         with: 
-          packagename: 'nanoframework.nanoFramework-VS2019-Extension'
+          packagename: 'TheQtCompany.QtVisualStudioTools2022'
 
       - name: Download the VSIX file
         run: |
