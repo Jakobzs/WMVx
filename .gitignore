@@ -10,9 +10,10 @@
 *.ipch
 *.vcxproj.user
 .vs
-WMVx/Support Files
-WMVx/settings.ini
+.vscode
+
+Dependencies/
+build/
 Support Files/definitions
-x64/
-WMVx/x64/
-.vscode/settings.json
+
+CMakeUserPresets.json
