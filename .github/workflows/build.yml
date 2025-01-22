@@ -13,10 +13,10 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - name: "Install QT Visual Studio Tools 2022" 
-        uses: microcompiler/install-vsix@main
-        with: 
-          packagename: 'TheQtCompany.QtVisualStudioTools2022'
+      #- name: "Install QT Visual Studio Tools 2022" 
+      #  uses: microcompiler/install-vsix@main
+      #  with: 
+      #    packagename: 'TheQtCompany.QtVisualStudioTools2022'
 
       - name: Install Qt
         uses: jurplel/install-qt-action@v4
