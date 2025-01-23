@@ -28,6 +28,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+
+      - name: CMake
+        run: cmake -S . -B build
+        
       - name: Add msbuild to PATH
         uses: microsoft/setup-msbuild@v2
 
