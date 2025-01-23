@@ -28,9 +28,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-
       - name: CMake
-        run: cmake -S . -B build
+        run: cmake -S . -B build -DCMAKE_TOOLCHAIN_FILE=C:/vcpkg/scripts/buildsystems/vcpkg.cmake
         
       - name: Add msbuild to PATH
         uses: microsoft/setup-msbuild@v2
